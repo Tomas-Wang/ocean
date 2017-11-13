@@ -25,6 +25,6 @@ def main(port):
     tornado.ioloop.IOLoop.current().start()
 
 
-if __name__ == '__main__':
-    run_port = 18888
+if __name__ == "__main__":
+    run_port = 8888
     main(run_port)
