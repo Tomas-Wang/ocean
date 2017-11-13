@@ -16,13 +16,15 @@ def make_app():
     ])
 
 
-def main():
+def main(port):
     app = make_app()
     server = tornado.httpserver.HTTPServer(app, xheaders=True)
-    server.bind(18888)
+    server.bind(port)
     server.start(1)
+    print "Server started at PORT: %s" % port
     tornado.ioloop.IOLoop.current().start()
 
 
 if __name__ == '__main__':
-    main()
+    run_port = 18888
+    main(run_port)
